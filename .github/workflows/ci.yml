@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: main
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node deps
+        run: |
+          npm install
+
+      - uses: wntrblm/nox@2024.10.09
+        with:
+          python-versions: "3.11"
+
+      - name: Lint
+        run: |
+          nox --session lint

@@ -27,6 +27,7 @@ update_sys_path(
     os.getenv("LS_IMPORT_STRATEGY", "useBundled"),
 )
 
+# pylint: disable=wrong-import-position
 from tclint.cli import tclsp
 
 if __name__ == "__main__":

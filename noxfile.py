@@ -31,11 +31,17 @@ def _check_files(names: List[str]) -> None:
         file_path = root_dir / name
         lines: List[str] = file_path.read_text().splitlines()
         if any(line for line in lines if line.startswith("# TODO:")):
-            raise Exception(f"Please update {os.fspath(file_path)}.")
+            raise RuntimeError(f"Please update {os.fspath(file_path)}.")
 
 
 def _update_pip_packages(session: nox.Session) -> None:
-    session.run("pip-compile", "--generate-hashes", "--resolver=backtracking", "--upgrade", "./requirements.in")
+    session.run(
+        "pip-compile",
+        "--generate-hashes",
+        "--resolver=backtracking",
+        "--upgrade",
+        "./requirements.in",
+    )
 
 
 def _get_package_data(package):
