@@ -8,13 +8,6 @@ updates:
       - 'no-changelog'
 
   - package-ecosystem: 'pip'
-    directory: /src/test/python_tests
-    schedule:
-      interval: daily
-    labels:
-      - 'no-changelog'
-
-  - package-ecosystem: 'pip'
     directory: /
     schedule:
       interval: daily
