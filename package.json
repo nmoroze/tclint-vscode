@@ -50,9 +50,7 @@
         "onLanguage:tcl",
         "onLanguage:sdc",
         "onLanguage:xdc",
-        "onLanguage:upf",
-        "workspaceContains:tclint.toml",
-        "workspaceContains:.tclint"
+        "onLanguage:upf"
     ],
     "main": "./dist/extension.js",
     "scripts": {
