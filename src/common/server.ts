@@ -42,9 +42,6 @@ async function createServer(
     // Set import strategy
     newEnv.LS_IMPORT_STRATEGY = settings.importStrategy;
 
-    // Set notification type
-    newEnv.LS_SHOW_NOTIFICATION = settings.showNotifications;
-
     const args =
         newEnv.USE_DEBUGPY === 'False' || !isDebugScript
             ? settings.interpreter.slice(1).concat([SERVER_SCRIPT_PATH])

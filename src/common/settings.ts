@@ -8,11 +8,8 @@ import { getConfiguration, getWorkspaceFolders } from './vscodeapi';
 export interface ISettings {
     cwd: string;
     workspace: string;
-    args: string[];
-    path: string[];
     interpreter: string[];
     importStrategy: string;
-    showNotifications: string;
 }
 
 export function getExtensionSettings(namespace: string, includeInterpreter?: boolean): Promise<ISettings[]> {
@@ -64,11 +61,8 @@ export async function getWorkspaceSettings(
     const workspaceSetting = {
         cwd: workspace.uri.fsPath,
         workspace: workspace.uri.toString(),
-        args: resolveVariables(config.get<string[]>(`args`) ?? [], workspace),
-        path: resolveVariables(config.get<string[]>(`path`) ?? [], workspace),
         interpreter: resolveVariables(interpreter, workspace),
         importStrategy: config.get<string>(`importStrategy`) ?? 'useBundled',
-        showNotifications: config.get<string>(`showNotifications`) ?? 'off',
     };
     return workspaceSetting;
 }
@@ -92,22 +86,16 @@ export async function getGlobalSettings(namespace: string, includeInterpreter?: 
     const setting = {
         cwd: process.cwd(),
         workspace: process.cwd(),
-        args: getGlobalValue<string[]>(config, 'args', []),
-        path: getGlobalValue<string[]>(config, 'path', []),
         interpreter: interpreter,
         importStrategy: getGlobalValue<string>(config, 'importStrategy', 'useBundled'),
-        showNotifications: getGlobalValue<string>(config, 'showNotifications', 'off'),
     };
     return setting;
 }
 
 export function checkIfConfigurationChanged(e: ConfigurationChangeEvent, namespace: string): boolean {
     const settings = [
-        `${namespace}.args`,
-        `${namespace}.path`,
         `${namespace}.interpreter`,
         `${namespace}.importStrategy`,
-        `${namespace}.showNotifications`,
     ];
     const changed = settings.map((s) => e.affectsConfiguration(s));
     return changed.includes(true);

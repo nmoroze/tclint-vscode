@@ -71,27 +71,9 @@
     "contributes": {
         "configuration": {
             "properties": {
-                "tclint.args": {
-                    "default": [],
-                    "description": "Arguments passed in. Each argument is a separate item in the array.",
-                    "items": {
-                        "type": "string"
-                    },
-                    "scope": "resource",
-                    "type": "array"
-                },
-                "tclint.path": {
-                    "default": [],
-                    "description": "When set to a path to tclsp binary, extension will use that. NOTE: Using this option may slowdown server response time.",
-                    "scope": "resource",
-                    "items": {
-                        "type": "string"
-                    },
-                    "type": "array"
-                },
                 "tclint.importStrategy": {
                     "default": "useBundled",
-                    "description": "Defines where `tclint` is imported from. This setting may be ignored if `tclint.path` is set.",
+                    "description": "Defines where `tclint` is imported from.",
                     "enum": [
                         "useBundled",
                         "fromEnvironment"
@@ -105,30 +87,12 @@
                 },
                 "tclint.interpreter": {
                     "default": [],
-                    "description": "When set to a path to python executable, extension will use that to launch the server and any subprocess.",
+                    "description": "When set to a path to  aPython executable, extension will use that to launch the server.",
                     "scope": "resource",
                     "items": {
                         "type": "string"
                     },
                     "type": "array"
-                },
-                "tclint.showNotifications": {
-                    "default": "off",
-                    "description": "Controls when notifications are shown by this extension.",
-                    "enum": [
-                        "off",
-                        "onError",
-                        "onWarning",
-                        "always"
-                    ],
-                    "enumDescriptions": [
-                        "All notifications are turned off, any errors or warning are still available in the logs.",
-                        "Notifications are shown only in the case of an error.",
-                        "Notifications are shown for errors and warnings.",
-                        "Notifications are show for anything that the server chooses to show."
-                    ],
-                    "scope": "machine",
-                    "type": "string"
                 }
             }
         },
