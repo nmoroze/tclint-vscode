@@ -14,11 +14,9 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 23
-          cache: npm
-          cache-dependency-path: package-lock.json
+      - name: Set up Node deps
+        run: |
+          npm install
 
       - uses: wntrblm/nox@2024.10.09
         with:
