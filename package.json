@@ -85,7 +85,7 @@
                 },
                 "tclint.interpreter": {
                     "default": [],
-                    "description": "When set to a path to  aPython executable, extension will use that to launch the server.",
+                    "description": "When set to the path of a Python executable, extension will use that to launch the server.",
                     "scope": "resource",
                     "items": {
                         "type": "string"
