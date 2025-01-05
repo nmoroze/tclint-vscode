@@ -105,6 +105,28 @@
         ],
         "languages": [
             {
+                "id": "tcl",
+                "aliases": [
+                    "Tcl",
+                    "tcl"
+                ],
+                "extensions": [".tcl", ".tm", ".test"]
+            },
+            {
+                "id": "sdc",
+                "aliases": [
+                  "Synopsys Design Constraints"
+                ],
+                "extensions": [".sdc"]
+            },
+            {
+                "id": "xdc",
+                "aliases": [
+                  "Xilinx Design Constraints"
+                ],
+                "extensions": [".xdc"]
+            },
+            {
                 "id": "upf",
                 "aliases": [
                     "UPF",

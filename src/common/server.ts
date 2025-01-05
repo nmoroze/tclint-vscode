@@ -15,7 +15,7 @@ import { traceError, traceInfo, traceVerbose } from './log/logging';
 import { getDebuggerPath } from './python';
 import { getExtensionSettings, getGlobalSettings, getWorkspaceSettings, ISettings } from './settings';
 import { getLSClientTraceLevel, getProjectRoot } from './utilities';
-import { isVirtualWorkspace } from './vscodeapi';
+import { getSupportedLanguageIds } from './vscodeapi';
 
 export type IInitOptions = { settings: ISettings[]; globalSettings: ISettings };
 
@@ -54,16 +54,11 @@ async function createServer(
         options: { cwd, env: newEnv },
     };
 
+    const documentSelector = getSupportedLanguageIds();
+
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
-        // Register the server for Tcl
-        // TODO: update for all supported languages
-        documentSelector: isVirtualWorkspace()
-            ? [{ language: 'tcl' }]
-            : [
-                  { scheme: 'file', language: 'tcl' },
-                  { scheme: 'untitled', language: 'tcl' },
-              ],
+        documentSelector: documentSelector,
         outputChannel: outputChannel,
         traceOutputChannel: outputChannel,
         revealOutputChannelOn: RevealOutputChannelOn.Never,

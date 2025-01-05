@@ -7,6 +7,7 @@ import {
     commands,
     ConfigurationScope,
     Disposable,
+    extensions,
     LogOutputChannel,
     Uri,
     window,
@@ -29,15 +30,22 @@ export function registerCommand(command: string, callback: (...args: any[]) => a
 
 export const { onDidChangeConfiguration } = workspace;
 
-export function isVirtualWorkspace(): boolean {
-    const isVirtual = workspace.workspaceFolders && workspace.workspaceFolders.every((f) => f.uri.scheme !== 'file');
-    return !!isVirtual;
-}
-
 export function getWorkspaceFolders(): readonly WorkspaceFolder[] {
     return workspace.workspaceFolders ?? [];
 }
 
 export function getWorkspaceFolder(uri: Uri): WorkspaceFolder | undefined {
     return workspace.getWorkspaceFolder(uri);
+}
+
+export function getSupportedLanguageIds(): string[] {
+    let extension = extensions.getExtension('nmoroze.tclint');
+    if (!extension) {
+        return [];
+    }
+    let contributes = extension.packageJSON.contributes;
+    if (!contributes || !contributes.languages) {
+        return [];
+    }
+    return contributes.languages.map((lang: { id: string }) => lang.id);
 }
