@@ -59,14 +59,13 @@ async function createServer(
 
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
-        // Register the server for python documents
+        // Register the server for Tcl
+        // TODO: update for all supported languages
         documentSelector: isVirtualWorkspace()
-            ? [{ language: 'python' }]
+            ? [{ language: 'tcl' }]
             : [
-                  { scheme: 'file', language: 'python' },
-                  { scheme: 'untitled', language: 'python' },
-                  { scheme: 'vscode-notebook', language: 'python' },
-                  { scheme: 'vscode-notebook-cell', language: 'python' },
+                  { scheme: 'file', language: 'tcl' },
+                  { scheme: 'untitled', language: 'tcl' },
               ],
         outputChannel: outputChannel,
         traceOutputChannel: outputChannel,
