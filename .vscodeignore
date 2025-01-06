@@ -23,3 +23,7 @@ noxfile.py
 **/requirements.txt
 **/requirements.in
 **/tool/_debug_server.py
+
+# Ignore images besides icon
+images/**
+!images/icon.png

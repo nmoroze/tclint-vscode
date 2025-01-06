@@ -12,7 +12,7 @@ This extension's core functionality is provided by [`tclint`][tclint]. See the `
 docs for more information about [supported lints][lint-docs] and the [formatting
 style][fmt-docs]. The current extension version (v0.1.0) bundles `tclint` v0.5.0.
 
-![VS Code window showing example Tcl script with two lint errors.](images/example.png)
+![VS Code window showing example Tcl script with two lint errors.](https://raw.githubusercontent.com/nmoroze/tclint-vscode/refs/heads/main/images/example.png)
 
 ## Getting Started
 

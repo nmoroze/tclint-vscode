@@ -37,6 +37,7 @@
         "Linters",
         "Formatters"
     ],
+    "icon": "./images/icon.png",
     "extensionDependencies": [
         "ms-python.python"
     ],
@@ -64,7 +65,7 @@
         "lint": "eslint src --ext ts",
         "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
         "test": "node ./out/test/runTest.js",
-        "vsce-package": "vsce package -o tclint.vsix"
+        "vsce-package": "vsce package -o tclint-vscode.vsix"
     },
     "contributes": {
         "configuration": {
