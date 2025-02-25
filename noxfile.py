@@ -12,6 +12,7 @@ import nox  # pylint: disable=import-error
 
 
 def _install_bundle(session: nox.Session) -> None:
+    session.run("rm", "-rf", "./bundled/libs", external=True)
     session.install(
         "-t",
         "./bundled/libs",
