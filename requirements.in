@@ -13,4 +13,4 @@ pygls
 packaging
 
 # Provides language server
-tclint
+tclint==0.5.3
