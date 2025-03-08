@@ -109,21 +109,29 @@
                     "Tcl",
                     "tcl"
                 ],
-                "extensions": [".tcl", ".tm", ".test"]
+                "extensions": [
+                    ".tcl",
+                    ".tm",
+                    ".test"
+                ]
             },
             {
                 "id": "sdc",
                 "aliases": [
-                  "Synopsys Design Constraints"
+                    "Synopsys Design Constraints"
                 ],
-                "extensions": [".sdc"]
+                "extensions": [
+                    ".sdc"
+                ]
             },
             {
                 "id": "xdc",
                 "aliases": [
-                  "Xilinx Design Constraints"
+                    "Xilinx Design Constraints"
                 ],
-                "extensions": [".xdc"]
+                "extensions": [
+                    ".xdc"
+                ]
             },
             {
                 "id": "upf",
@@ -132,7 +140,9 @@
                     "upf",
                     "Universal Power Format"
                 ],
-                "extensions": [".upf"]
+                "extensions": [
+                    ".upf"
+                ]
             }
         ]
     },
