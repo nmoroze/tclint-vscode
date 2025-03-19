@@ -34,8 +34,12 @@ you to configure a default formatter for the language. Select `nmoroze.tclint`, 
 `tclint.toml` or `.tclint` if one exists under the workspace root. See the `tclint`
 [configuration docs][config-docs] for supported options.
 
-This extension adds two settings to VS Code. These are oriented towards development and
-advanced users, the extension should work out-of-the-box for most users.
+To explicitly supply a path to a configuration file instead, use the `tclint.configPath`
+VS Code setting. A relative path supplied in workspace settings will be resolved from
+the workspace root.
+
+This extension also adds the following settings that are oriented towards development
+and advanced users. The default settings should work out-of-the-box for most users.
 
 - `tclint.interpreter`: Path to Python executable used to launch the `tclint` server. By
 default, the extension will use the default interpreter configured by the Python

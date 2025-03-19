@@ -10,6 +10,7 @@ export interface ISettings {
     workspace: string;
     interpreter: string[];
     importStrategy: string;
+    configPath: string;
 }
 
 export function getExtensionSettings(namespace: string, includeInterpreter?: boolean): Promise<ISettings[]> {
@@ -58,11 +59,14 @@ export async function getWorkspaceSettings(
         }
     }
 
+    let configPath = config.get<string>('configPath') ?? '';
+
     const workspaceSetting = {
         cwd: workspace.uri.fsPath,
         workspace: workspace.uri.toString(),
         interpreter: resolveVariables(interpreter, workspace),
         importStrategy: config.get<string>(`importStrategy`) ?? 'useBundled',
+        configPath: configPath,
     };
     return workspaceSetting;
 }
@@ -83,11 +87,14 @@ export async function getGlobalSettings(namespace: string, includeInterpreter?: 
         }
     }
 
+    let configPath = getGlobalValue<string>(config, 'configPath', '');
+
     const setting = {
         cwd: process.cwd(),
         workspace: process.cwd(),
         interpreter: interpreter,
         importStrategy: getGlobalValue<string>(config, 'importStrategy', 'useBundled'),
+        configPath: configPath,
     };
     return setting;
 }
@@ -96,6 +103,7 @@ export function checkIfConfigurationChanged(e: ConfigurationChangeEvent, namespa
     const settings = [
         `${namespace}.interpreter`,
         `${namespace}.importStrategy`,
+        `${namespace}.configPath`,
     ];
     const changed = settings.map((s) => e.affectsConfiguration(s));
     return changed.includes(true);

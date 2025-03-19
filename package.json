@@ -92,6 +92,10 @@
                         "type": "string"
                     },
                     "type": "array"
+                },
+                "tclint.configPath": {
+                    "type": "string",
+                    "description": "Path to tclint configuration file. Defaults to searching workspace."
                 }
             }
         },
