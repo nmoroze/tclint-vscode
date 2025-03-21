@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes ./requirements.in
 #
-attrs==25.1.0 \
-    --hash=sha256:1c97078a80c814273a76b2a298a932eb681c87415c11dee0a6921de7f1b02c3e \
-    --hash=sha256:c75a69e28a550a7e93789579c22aa26b0f5b83b75dc4e08fe092980051e1090a
+attrs==25.3.0 \
+    --hash=sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3 \
+    --hash=sha256:75d7cefc7fb576747b2c81b4442d4d4a1ce0900973527c011d1030fd3bf4af1b
     # via
     #   cattrs
     #   lsprotocol
@@ -54,9 +54,9 @@ schema==0.7.5 \
     --hash=sha256:f06717112c61895cabc4707752b88716e8420a8819d71404501e114f91043197 \
     --hash=sha256:f3ffdeeada09ec34bf40d7d79996d9f7175db93b7a5065de0faa7f41083c1e6c
     # via tclint
-tclint==0.5.3 \
-    --hash=sha256:9da20ea9574aefc0fec35e99584bf3621ee5faeb44af799553c090d9642e131e \
-    --hash=sha256:fc06be8a5bc15fd3aef4848b7880c2423d249305735e83d0fc3c8fd34988d930
+tclint==0.5.4 \
+    --hash=sha256:288019b110a182934f62935e70a8f237fd4469ce6324ea50760da21e3a3195a3 \
+    --hash=sha256:86801f8cfc85cb6c08714cca7b0c5aa5d2c93d99f9e6f537a1484510a5d16f41
     # via -r ./requirements.in
 tomli==2.0.2 \
     --hash=sha256:2ebe24485c53d303f690b0ec092806a085f07af5a5aa1464f3931eec36caaa38 \

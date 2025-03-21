@@ -2,7 +2,7 @@
     "name": "tclint",
     "displayName": "tclint Language Server",
     "description": "Linting and formatting for Tcl and EDA scripts.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "preview": true,
     "serverInfo": {
         "name": "tclint",
