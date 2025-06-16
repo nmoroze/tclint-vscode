@@ -90,6 +90,9 @@ def _update_npm_packages(session: nox.Session) -> None:
 
 
 def _setup_template_environment(session: nox.Session) -> None:
+    # Fixes incompatibility between pip and pip-tools.
+    # https://github.com/jazzband/pip-tools/issues/2176
+    session.install("pip<25")
     session.install("wheel", "pip-tools")
     _update_pip_packages(session)
     _install_bundle(session)
