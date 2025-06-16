@@ -10,7 +10,7 @@ particularly ones related to EDA (Electronic Design Automation) workflows.
 
 This extension's core functionality is provided by [`tclint`][tclint]. See the `tclint`
 docs for more information about [supported lints][lint-docs] and the [formatting
-style][fmt-docs]. The current extension version (v0.1.2) bundles `tclint` v0.5.4.
+style][fmt-docs]. The current extension version (v0.1.3) bundles `tclint` v0.6.0.
 
 ![VS Code window showing example Tcl script with two lint errors.](https://raw.githubusercontent.com/nmoroze/tclint-vscode/refs/heads/main/images/example.png)
 
@@ -63,9 +63,9 @@ For advanced support requests, you can reach the maintainer via email at
 
 [tclint]: https://github.com/nmoroze/tclint
 [ms-python]: https://marketplace.visualstudio.com/items?itemName=ms-python.python
-[lint-docs]: https://github.com/nmoroze/tclint/blob/v0.5.4/docs/violations.md
-[fmt-docs]: https://github.com/nmoroze/tclint/blob/v0.5.4/docs/tclfmt.md
-[config-docs]: https://github.com/nmoroze/tclint/blob/v0.5.4/docs/configuration.md
+[lint-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/violations.md
+[fmt-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/tclfmt.md
+[config-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/configuration.md
 [bitwisecook-tcl]: https://marketplace.visualstudio.com/items?itemName=bitwisecook.tcl
 [new-issue]: https://github.com/nmoroze/tclint-vscode/issues/new
 [email]: mailto:me@noahmoroze.com
