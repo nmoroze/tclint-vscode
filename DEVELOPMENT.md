@@ -15,3 +15,7 @@
 1) If everything looks good, upload it to the [VS Code marketplace][marketplace].
 
 [marketplace]: https://marketplace.visualstudio.com/manage/publishers/nmoroze
+
+## Testing
+
+There's a smoke test that doesn't do a whole lot. Run it with `npm test`.
