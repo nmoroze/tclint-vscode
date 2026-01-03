@@ -10,7 +10,7 @@ particularly ones related to EDA (Electronic Design Automation) workflows.
 
 This extension's core functionality is provided by [`tclint`][tclint]. See the `tclint`
 docs for more information about [supported lints][lint-docs] and the [formatting
-style][fmt-docs]. The current extension version (v0.1.3) bundles `tclint` v0.6.0.
+style][fmt-docs]. The current extension version (v0.1.4) bundles `tclint` v0.7.0.
 
 ![VS Code window showing example Tcl script with two lint errors.](https://raw.githubusercontent.com/nmoroze/tclint-vscode/refs/heads/main/images/example.png)
 
@@ -30,9 +30,8 @@ you to configure a default formatter for the language. Select `nmoroze.tclint`, 
 
 ## Configuration
 
-`tclint`'s linter and formatter automatically pull configuration from a file named
-`tclint.toml` or `.tclint` if one exists under the workspace root. See the `tclint`
-[configuration docs][config-docs] for supported options.
+`tclint`'s linter and formatter automatically pull configuration from files named `tclint.toml` or `.tclint` within the workspace.
+See the `tclint` [configuration docs][config-docs] for supported options.
 
 To explicitly supply a path to a configuration file instead, use the `tclint.configPath`
 VS Code setting. A relative path supplied in workspace settings will be resolved from
@@ -63,9 +62,9 @@ For advanced support requests, you can reach the maintainer via email at
 
 [tclint]: https://github.com/nmoroze/tclint
 [ms-python]: https://marketplace.visualstudio.com/items?itemName=ms-python.python
-[lint-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/violations.md
-[fmt-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/tclfmt.md
-[config-docs]: https://github.com/nmoroze/tclint/blob/v0.6.0/docs/configuration.md
+[lint-docs]: https://github.com/nmoroze/tclint/blob/v0.7.0/docs/violations.md
+[fmt-docs]: https://github.com/nmoroze/tclint/blob/v0.7.0/docs/tclfmt.md
+[config-docs]: https://github.com/nmoroze/tclint/blob/v0.7.0/docs/configuration.md
 [bitwisecook-tcl]: https://marketplace.visualstudio.com/items?itemName=bitwisecook.tcl
 [new-issue]: https://github.com/nmoroze/tclint-vscode/issues/new
 [email]: mailto:me@noahmoroze.com
