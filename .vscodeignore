@@ -12,6 +12,10 @@ vsc-extension-quickstart.md
 **/*.ts
 .venv/**
 .nox/**
+.claude/**
+.vscode-test.js
+DEVELOPMENT.md
+*.vsix
 .github/
 **/__pycache__/**
 **/*.pyc
