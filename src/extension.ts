@@ -81,7 +81,7 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
                 'Python interpreter missing:\r\n' +
                     "[Option 1] Select Python interpreter using Microsoft's Python extension.\r\n" +
                     `[Option 2] Set an interpreter using "${serverId}.interpreter" setting.\r\n` +
-                    'Please use Python 3.9 or greater.',
+                    'Please use Python 3.10 or greater.',
             );
         } finally {
             isRestarting = false;
